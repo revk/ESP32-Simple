@@ -29,14 +29,16 @@ app_main ()
    // Update partition table if necessary
    if (esp_partition_find_first (ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_ANY, "factory"))
    {                            // Factory exists, we want to change to new partition table.
-#define BLOCK SPI_FLASH_SEC_SIZE              // flash block size
+#define BLOCK SPI_FLASH_SEC_SIZE        // flash block size
 #define BLOCK_START (CONFIG_PARTITION_TABLE_OFFSET / BLOCK * BLOCK)
 #define PART_OFFSET (CONFIG_PARTITION_TABLE_OFFSET-BLOCK_START)
 #define	PART_SIZE (part_end-part_start)
-      revk_error (TAG, "Updating partition table (%d) block %d", PART_SIZE,BLOCK);
+      revk_error (TAG, "Updating partition table (%d) block %d", PART_SIZE, BLOCK);
       if (PART_OFFSET + PART_SIZE > BLOCK)
          revk_error (TAG, "Block size error");
       uint8_t *mem = malloc (BLOCK);
+      if (!mem)
+         revk_error (TAG, "Malloc fail: %d", BLOCK);
       esp_err_t e;
       if ((e = spi_flash_read (BLOCK_START, mem, BLOCK)))
          revk_error (TAG, "Read fail:%s", esp_err_to_name (e));
