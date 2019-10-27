@@ -54,7 +54,7 @@ app_main ()
             else
             {
                revk_info (TAG, "Partition table loaded");
-               revk_restart ("OTA complete", 5000);
+               revk_restart ("OTA complete", 5);
             }
          }
       }
