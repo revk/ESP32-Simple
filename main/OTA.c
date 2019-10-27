@@ -39,15 +39,21 @@ app_main ()
       uint8_t *mem = malloc (BLOCK);
       if (!mem)
          revk_error (TAG, "Malloc fail: %d", BLOCK);
-      esp_err_t e;
-      if ((e = spi_flash_read (BLOCK_START, mem, BLOCK)))
-         revk_error (TAG, "Read fail:%s", esp_err_to_name (e));
-      memcpy (mem + PART_OFFSET, part_start, PART_SIZE);
-      if ((e = spi_flash_erase_range (BLOCK_START, BLOCK)))
-         revk_error (TAG, "Erase fail:%s", esp_err_to_name (e));
-      if ((e = spi_flash_write (BLOCK_START, mem, BLOCK)))
-         revk_error (TAG, "Write fail:%s", esp_err_to_name (e));
-
-      esp_restart ();
+      else
+      {
+         esp_err_t e;
+         if ((e = spi_flash_read (BLOCK_START, mem, BLOCK)))
+            revk_error (TAG, "Read fail:%s", esp_err_to_name (e));
+         else
+         {
+            memcpy (mem + PART_OFFSET, part_start, PART_SIZE);
+            if ((e = spi_flash_erase_range (BLOCK_START, BLOCK)))
+               revk_error (TAG, "Erase fail:%s", esp_err_to_name (e));
+            else if ((e = spi_flash_write (BLOCK_START, mem, BLOCK)))
+               revk_error (TAG, "Write fail:%s", esp_err_to_name (e));
+            else
+               esp_restart ();
+         }
+      }
    }
 }
