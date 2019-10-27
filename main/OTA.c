@@ -1,9 +1,11 @@
 // Dumb OTA app
 // Copyright © 2019 Adrian Kennard, Andrews & Arnold Ltd. See LICENCE file for details. GPL 3.0
+static const char TAG[]="OTA";
 
 #include "revk.h"
 
 static char    *otaurl;
+
 
 const char     *
 app_command(const char *tag, unsigned int len, const unsigned char *value)
@@ -21,4 +23,6 @@ app_main()
 {
 	revk_init(&app_command);
 	revk_register("otaurl", 0, 0, &otaurl, NULL, 0);
+	// Update partition table if necessary
+	// TODO
 }
