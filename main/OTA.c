@@ -52,7 +52,10 @@ app_main ()
             else if ((e = spi_flash_write (BLOCK_START, mem, BLOCK)))
                revk_error (TAG, "Write fail:%s", esp_err_to_name (e));
             else
-               esp_restart ();
+            {
+               revk_info (TAG, "Partition table loaded");
+               revk_restart ("OTA complete", 5000);
+            }
          }
       }
    }
