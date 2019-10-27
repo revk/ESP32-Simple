@@ -7,3 +7,8 @@ PROJECT_NAME := OTA
 
 include $(IDF_PATH)/make/project.mk
 
+
+update:
+	git submodule update --init --recursive --remote
+	git commit -a -m "Library update"
+
