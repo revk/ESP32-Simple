@@ -1,4 +1,5 @@
-// Dumb OTA app
+// OTA app, can be used to do an OTA from a small footprint. Also does partition update.
+// Warning, moving NVS will typically mess reset all of the settings
 // Copyright © 2019 Adrian Kennard, Andrews & Arnold Ltd. See LICENCE file for details. GPL 3.0
 static const char TAG[] = "OTA";
 
@@ -27,8 +28,10 @@ app_main ()
    revk_init (&app_command);
    revk_register ("otaurl", 0, 0, &otaurl, NULL, 0);
    // Update partition table if necessary
-   if (esp_partition_find_first (ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_ANY, "factory"))
-   {                            // Factory exists, we want to change to new partition table.
+   const esp_partition_t *f = esp_partition_find_first (ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_FACTORY, "factory");
+   const esp_partition_t *n = esp_partition_find_first (ESP_PARTITION_TYPE_DATA, ESP_PARTITION_SUBTYPE_DATA_NVS, "nvs");
+   if (f || !n || n->size < 0xC000)
+   {                            // Factory exists or nvs is smaller than expected.
       revk_error (TAG, "Updating partition table (%d) block %d", part_end - part_start, SPI_FLASH_SEC_SIZE);
       if ((part_end - part_start) > SPI_FLASH_SEC_SIZE)
          revk_error (TAG, "Block size error");
