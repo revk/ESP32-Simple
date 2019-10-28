@@ -28,6 +28,7 @@ app_main ()
    revk_init (&app_command);
    revk_register ("otaurl", 0, 0, &otaurl, NULL, 0);
    // Update partition table if necessary
+   // TODO, is it possible to simply compare the partition table with what we expect perhaps?
    const esp_partition_t *f = esp_partition_find_first (ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_APP_FACTORY, "factory");
    const esp_partition_t *n = esp_partition_find_first (ESP_PARTITION_TYPE_DATA, ESP_PARTITION_SUBTYPE_DATA_NVS, "nvs");
    if (f || !n || n->size < 0xC000)
