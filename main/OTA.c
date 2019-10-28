@@ -45,10 +45,7 @@ app_main ()
          else if ((e = spi_flash_write (CONFIG_PARTITION_TABLE_OFFSET, mem, SPI_FLASH_SEC_SIZE)))
             revk_error (TAG, "Write fail:%s", esp_err_to_name (e));
          else
-         {
-            revk_info (TAG, "Partition table loaded");
-            revk_restart ("OTA complete", 5);
-         }
+            revk_restart ("New partition table loaded", 0);
       }
    }
 }
