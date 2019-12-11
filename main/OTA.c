@@ -16,6 +16,8 @@ app_command (const char *tag, unsigned int len, const unsigned char *value)
       revk_ota (otaurl);
       revk_setting ("otaurl", 0, NULL); // Clear the URL
    }
+   if (!strcmp (tag, "connect"))
+      revk_info (TAG, "Running generic OTA system");
    return "";
 }
 
