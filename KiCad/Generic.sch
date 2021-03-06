@@ -78,8 +78,6 @@ Connection ~ 7500 1550
 Wire Wire Line
 	7500 1550 7500 1600
 Wire Wire Line
-	5850 5150 6300 5150
-Wire Wire Line
 	6000 4750 5950 4750
 Wire Wire Line
 	6000 4650 5950 4650
@@ -87,8 +85,6 @@ Text GLabel 5950 4750 0    50   Input ~ 0
 D+
 Text GLabel 5950 4650 0    50   Input ~ 0
 D-
-Wire Wire Line
-	5950 4350 6400 4350
 Wire Wire Line
 	6300 4750 6400 4750
 Wire Wire Line
@@ -117,8 +113,6 @@ F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_
 	1    2950 2950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4000 4350 3850 4350
 Wire Wire Line
 	2950 1550 3950 1550
 NoConn ~ 2350 2950
@@ -206,8 +200,6 @@ F 3 "https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT230X.pdf" H 
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 4050 7750 4050
-Wire Wire Line
 	7000 3750 7750 3750
 Connection ~ 7300 2000
 Wire Wire Line
@@ -227,15 +219,12 @@ Connection ~ 7300 2300
 Connection ~ 7300 2800
 Wire Wire Line
 	7300 2800 7750 2800
-NoConn ~ 3550 2550
 NoConn ~ 3550 2950
 NoConn ~ 3550 3050
 NoConn ~ 3550 3250
 NoConn ~ 3550 3350
 NoConn ~ 3550 3450
 NoConn ~ 3550 3750
-NoConn ~ 3550 3950
-NoConn ~ 3550 4050
 $Comp
 L power:VBUS #PWR07
 U 1 1 60464020
@@ -269,32 +258,10 @@ F 3 "" H 3950 1550 50  0001 C CNN
 	1    3950 1550
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+3.3V #PWR06
-U 1 1 60466DA7
-P 5950 4350
-F 0 "#PWR06" H 5950 4200 50  0001 C CNN
-F 1 "+3.3V" H 5965 4523 50  0000 C CNN
-F 2 "" H 5950 4350 50  0001 C CNN
-F 3 "" H 5950 4350 50  0001 C CNN
-	1    5950 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR05
-U 1 1 604684A4
-P 5850 5150
-F 0 "#PWR05" H 5850 5000 50  0001 C CNN
-F 1 "+3.3V" H 5865 5323 50  0000 C CNN
-F 2 "" H 5850 5150 50  0001 C CNN
-F 3 "" H 5850 5150 50  0001 C CNN
-	1    5850 5150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6400 4950 6300 4950
 Wire Wire Line
-	6300 4950 6300 5150
+	6300 4950 6300 5100
 $Comp
 L power:GND #PWR08
 U 1 1 6046CDD6
@@ -337,17 +304,6 @@ F 1 "GND" H 4005 4177 50  0000 C CNN
 F 2 "" H 4000 4350 50  0001 C CNN
 F 3 "" H 4000 4350 50  0001 C CNN
 	1    4000 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR011
-U 1 1 6047139A
-P 7750 4050
-F 0 "#PWR011" H 7750 3900 50  0001 C CNN
-F 1 "+3.3V" H 7765 4223 50  0000 C CNN
-F 2 "" H 7750 4050 50  0001 C CNN
-F 3 "" H 7750 4050 50  0001 C CNN
-	1    7750 4050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -396,10 +352,7 @@ CBUS0
 Wire Wire Line
 	7800 4550 8050 4550
 Wire Wire Line
-	7750 4050 8800 4050
-Wire Wire Line
 	8800 4050 8800 4850
-Connection ~ 7750 4050
 Wire Wire Line
 	8800 5450 8800 5150
 Wire Wire Line
@@ -408,32 +361,6 @@ Wire Wire Line
 	8050 4950 7800 4950
 Wire Wire Line
 	8050 5050 7800 5050
-Wire Wire Line
-	3550 3550 3550 3650
-Wire Wire Line
-	3550 3650 3850 3650
-Wire Wire Line
-	3850 3650 3850 4350
-Connection ~ 3550 3650
-Connection ~ 3850 4350
-Wire Wire Line
-	3850 4350 2950 4350
-Wire Wire Line
-	2350 1950 2350 2050
-$Comp
-L power:GND #PWR01
-U 1 1 60488666
-P 1850 2050
-F 0 "#PWR01" H 1850 1800 50  0001 C CNN
-F 1 "GND" H 1855 1877 50  0000 C CNN
-F 2 "" H 1850 2050 50  0001 C CNN
-F 3 "" H 1850 2050 50  0001 C CNN
-	1    1850 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2350 2050 1850 2050
-Connection ~ 2350 2050
 $Comp
 L Connector:Conn_01x06_Male J1
 U 1 1 6049A89B
@@ -622,27 +549,114 @@ Wire Wire Line
 	3150 6100 3150 5900
 Wire Wire Line
 	3150 5900 3300 5900
-NoConn ~ 3550 2350
 NoConn ~ 3550 3850
+Wire Wire Line
+	2950 1550 2950 1650
+Connection ~ 2950 1550
 $Comp
-L Device:C C5
-U 1 1 6043D787
-P 1150 1800
-F 0 "C5" H 1265 1846 50  0000 L CNN
-F 1 "100UF" H 1265 1755 50  0000 L CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-20_AVX-F_Pad2.25x2.35mm_HandSolder" H 1188 1650 50  0001 C CNN
-F 3 "~" H 1150 1800 50  0001 C CNN
-	1    1150 1800
+L Regulator_Linear:TC1262-33 U3
+U 1 1 6043F680
+P 9600 3300
+F 0 "U3" H 9600 3542 50  0000 C CNN
+F 1 "TC1262-33" H 9600 3451 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 9600 3525 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/21373C.pdf" H 9600 3000 50  0001 C CNN
+	1    9600 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2950 1550 2950 1650
+	7200 4050 8800 4050
+$Comp
+L power:GND #PWR0102
+U 1 1 60448DC2
+P 9600 3600
+F 0 "#PWR0102" H 9600 3350 50  0001 C CNN
+F 1 "GND" H 9605 3427 50  0000 C CNN
+F 2 "" H 9600 3600 50  0001 C CNN
+F 3 "" H 9600 3600 50  0001 C CNN
+	1    9600 3600
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2950 1650 1150 1650
-Connection ~ 2950 1550
+	7750 3750 8700 3750
 Wire Wire Line
-	1150 1950 1150 2050
+	8700 3750 8700 3300
 Wire Wire Line
-	1150 2050 1850 2050
-Connection ~ 1850 2050
+	8700 3300 9300 3300
+Connection ~ 7750 3750
+Wire Wire Line
+	9900 3300 10250 3300
+Wire Wire Line
+	10250 3300 10250 3100
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 6045266B
+P 10250 3100
+F 0 "#PWR0103" H 10250 2950 50  0001 C CNN
+F 1 "+3.3V" H 10265 3273 50  0000 C CNN
+F 2 "" H 10250 3100 50  0001 C CNN
+F 3 "" H 10250 3100 50  0001 C CNN
+	1    10250 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4350 5550 4350
+Wire Wire Line
+	5550 4350 5550 5100
+Wire Wire Line
+	5550 5100 6300 5100
+Connection ~ 6300 5100
+Wire Wire Line
+	6300 5750 9250 5750
+Wire Wire Line
+	9250 5750 9250 4050
+Wire Wire Line
+	9250 4050 8800 4050
+Wire Wire Line
+	6300 5100 6300 5750
+Connection ~ 8800 4050
+Wire Wire Line
+	3550 3950 3550 4050
+Wire Wire Line
+	3550 2550 4250 2550
+Wire Wire Line
+	4250 2550 4250 2350
+Wire Wire Line
+	4250 2350 3550 2350
+Wire Wire Line
+	3550 4050 3650 4050
+Wire Wire Line
+	3650 4050 3650 4350
+Connection ~ 3550 4050
+Connection ~ 3650 4350
+Wire Wire Line
+	3650 4350 2950 4350
+Wire Wire Line
+	4250 4050 3850 4050
+Wire Wire Line
+	4250 2550 4250 4050
+Connection ~ 4250 2550
+Connection ~ 3650 4050
+Wire Wire Line
+	3650 4350 4000 4350
+NoConn ~ 2350 1950
+NoConn ~ 3550 3550
+NoConn ~ -1300 1100
+Wire Wire Line
+	2400 2050 2350 2050
+Wire Wire Line
+	1850 2050 1850 4350
+Wire Wire Line
+	1850 4350 2950 4350
+Connection ~ 2350 2050
+Wire Wire Line
+	2350 2050 1850 2050
+Connection ~ 2950 4350
+Wire Wire Line
+	3550 3650 3850 3650
+Wire Wire Line
+	3850 3650 3850 4050
+Connection ~ 3850 4050
+Wire Wire Line
+	3850 4050 3650 4050
 $EndSCHEMATC
