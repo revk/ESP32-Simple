@@ -624,4 +624,25 @@ Wire Wire Line
 	3150 5900 3300 5900
 NoConn ~ 3550 2350
 NoConn ~ 3550 3850
+$Comp
+L Device:C C5
+U 1 1 6043D787
+P 1150 1800
+F 0 "C5" H 1265 1846 50  0000 L CNN
+F 1 "100UF" H 1265 1755 50  0000 L CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-20_AVX-F_Pad2.25x2.35mm_HandSolder" H 1188 1650 50  0001 C CNN
+F 3 "~" H 1150 1800 50  0001 C CNN
+	1    1150 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 1550 2950 1650
+Wire Wire Line
+	2950 1650 1150 1650
+Connection ~ 2950 1550
+Wire Wire Line
+	1150 1950 1150 2050
+Wire Wire Line
+	1150 2050 1850 2050
+Connection ~ 1850 2050
 $EndSCHEMATC
