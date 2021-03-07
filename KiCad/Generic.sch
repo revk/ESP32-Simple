@@ -55,12 +55,6 @@ Connection ~ 7100 1800
 Wire Wire Line
 	7100 1300 7700 1300
 Wire Wire Line
-	3550 1750 3950 1750
-Wire Wire Line
-	3550 1850 3950 1850
-Wire Wire Line
-	3550 2050 3950 2050
-Wire Wire Line
 	1850 1750 2350 1750
 Wire Wire Line
 	7100 1500 7200 1500
@@ -83,19 +77,6 @@ Wire Wire Line
 	6400 4650 6300 4650
 Wire Wire Line
 	7000 4050 7000 3750
-$Comp
-L RF_Module:ESP32-WROOM-32 U1
-U 1 1 6043326C
-P 2950 2950
-F 0 "U1" H 2950 4531 50  0000 C CNN
-F 1 "ESP32-WROOM-32" H 2950 4440 50  0000 C CNN
-F 2 "RF_Module:ESP32-WROOM-32" H 2950 1450 50  0001 C CNN
-F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 2650 3000 50  0001 C CNN
-	1    2950 2950
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2950 1550 3950 1550
 NoConn ~ 2350 2950
 NoConn ~ 2350 3050
 NoConn ~ 2350 3150
@@ -248,23 +229,23 @@ F 3 "~" H 2800 6300 50  0001 C CNN
 $EndComp
 Text GLabel 3950 2450 2    50   Input ~ 0
 IO1
-Text GLabel 3950 2750 2    50   Input ~ 0
-IO2
-Text GLabel 3950 2150 2    50   Input ~ 0
-IO3
 Text GLabel 3950 2650 2    50   Input ~ 0
-IO4
+IO2
 Text GLabel 3950 1950 2    50   Input ~ 0
+IO3
+Text GLabel 3950 2750 2    50   Input ~ 0
+IO4
+Text GLabel 3950 2150 2    50   Input ~ 0
 IO5
 Text GLabel 3950 1850 2    50   Input ~ 0
 O
 Text GLabel 3950 1750 2    50   Input ~ 0
 CBUS3
-Text GLabel 3950 3450 2    50   Input ~ 0
+Text GLabel 3950 2850 2    50   Input ~ 0
 CBUS0
-Text GLabel 3950 3550 2    50   Input ~ 0
+Text GLabel 3950 2250 2    50   Input ~ 0
 CBUS1
-Text GLabel 3950 3150 2    50   Input ~ 0
+Text GLabel 3950 2550 2    50   Input ~ 0
 CBUS2
 Text GLabel 4250 6200 2    50   Input ~ 0
 IO1
@@ -390,22 +371,6 @@ F 3 "" H 3750 5300 50  0001 C CNN
 	1    3750 5300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3950 2450 3550 2450
-Wire Wire Line
-	3950 2750 3550 2750
-Wire Wire Line
-	3950 2150 3550 2150
-Wire Wire Line
-	3950 1950 3550 1950
-Wire Wire Line
-	3950 2650 3550 2650
-Wire Wire Line
-	3950 3150 3550 3150
-Wire Wire Line
-	3950 3550 3550 3550
-Wire Wire Line
-	3950 3450 3550 3450
 $Comp
 L power:GND #PWR01
 U 1 1 60526275
@@ -426,43 +391,25 @@ Wire Wire Line
 NoConn ~ 3550 3850
 Wire Wire Line
 	2950 1550 2950 1650
-Connection ~ 2950 1550
 Wire Wire Line
 	3550 3950 3550 4050
-Wire Wire Line
-	4350 2550 4350 2350
 Wire Wire Line
 	3550 4050 3650 4050
 Wire Wire Line
 	3650 4050 3650 4350
-Connection ~ 3550 4050
 Connection ~ 3650 4350
-Wire Wire Line
-	3650 4350 2950 4350
-Wire Wire Line
-	4350 2550 4350 4050
-Connection ~ 4350 2550
 Connection ~ 3650 4050
 Wire Wire Line
 	3650 4350 4000 4350
-NoConn ~ 2350 1950
 Wire Wire Line
 	2400 2050 2350 2050
 Wire Wire Line
 	1850 2050 1850 4350
-Wire Wire Line
-	1850 4350 2950 4350
 Connection ~ 2350 2050
 Wire Wire Line
 	2350 2050 1850 2050
-Connection ~ 2950 4350
-Wire Wire Line
-	3550 3650 3850 3650
 Wire Wire Line
 	3850 3650 3850 4050
-Connection ~ 3850 4050
-Wire Wire Line
-	3850 4050 3650 4050
 Wire Wire Line
 	7100 2000 7750 2000
 Wire Wire Line
@@ -490,17 +437,6 @@ F 1 "+3.3V" H 7765 3923 50  0000 C CNN
 F 2 "" H 7750 3750 50  0001 C CNN
 F 3 "" H 7750 3750 50  0001 C CNN
 	1    7750 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L RevK:D24V5F3 M1
-U 1 1 60474713
-P 9600 1600
-F 0 "M1" H 9968 1511 50  0000 L CNN
-F 1 "D24V5F3" H 9968 1420 50  0000 L CNN
-F 2 "RevK:D24V5F3" H 9600 1800 50  0001 C CNN
-F 3 "https://www.pololu.com/product/2842/resources" H 9600 1800 50  0001 C CNN
-	1    9600 1600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -550,31 +486,77 @@ Wire Wire Line
 	9600 2150 10350 2150
 Wire Wire Line
 	10350 2150 10350 1400
-NoConn ~ 3550 2850
-NoConn ~ 3550 2250
-NoConn ~ 9600 1600
 Wire Wire Line
 	7200 4050 7200 3750
 Connection ~ 7200 3750
 Wire Wire Line
 	7200 3750 7750 3750
 $Comp
-L power:GND #PWR?
-U 1 1 604B478D
-P 4500 3350
-F 0 "#PWR?" H 4500 3100 50  0001 C CNN
-F 1 "GND" H 4505 3177 50  0000 C CNN
-F 2 "" H 4500 3350 50  0001 C CNN
-F 3 "" H 4500 3350 50  0001 C CNN
-	1    4500 3350
+L RevK:D24V5F3-NoSHDN M1
+U 1 1 60455088
+P 9600 1600
+F 0 "M1" H 9968 1461 50  0000 L CNN
+F 1 "D24V5F3-NoSHDN" H 9968 1370 50  0000 L CNN
+F 2 "RevK:D24V5F3-NoSHDN" H 9600 1800 50  0001 C CNN
+F 3 "https://www.pololu.com/product/2842/resources" H 9600 1800 50  0001 C CNN
+	1    9600 1600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3550 2350 4350 2350
+	2350 1950 2350 2050
 Wire Wire Line
-	3550 2550 4350 2550
+	3850 3550 3850 3650
+Connection ~ 3850 3650
+NoConn ~ 3550 2350
+Connection ~ 2950 4350
 Wire Wire Line
-	3850 4050 4350 4050
+	1850 4350 2950 4350
+Connection ~ 3550 4050
+Connection ~ 2950 1550
 Wire Wire Line
-	3550 3350 4500 3350
+	3850 4050 3650 4050
+Wire Wire Line
+	3550 3650 3850 3650
+Wire Wire Line
+	3850 3550 3550 3550
+Wire Wire Line
+	3950 2750 3550 2750
+Wire Wire Line
+	3950 2650 3550 2650
+Wire Wire Line
+	3950 2450 3550 2450
+Wire Wire Line
+	3950 2150 3550 2150
+Wire Wire Line
+	3550 2050 3950 2050
+Wire Wire Line
+	3950 1950 3550 1950
+Wire Wire Line
+	3550 1850 3950 1850
+Wire Wire Line
+	3550 1750 3950 1750
+Wire Wire Line
+	3650 4350 2950 4350
+Wire Wire Line
+	2950 1550 3950 1550
+$Comp
+L RF_Module:ESP32-WROOM-32 U1
+U 1 1 6043326C
+P 2950 2950
+F 0 "U1" H 2950 4531 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 2950 4440 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 2950 1450 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 2650 3000 50  0001 C CNN
+	1    2950 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2550 3550 2550
+Wire Wire Line
+	3950 2850 3550 2850
+Wire Wire Line
+	3950 2250 3550 2250
+NoConn ~ 3550 3450
+NoConn ~ 3550 3150
+NoConn ~ 3550 3350
 $EndSCHEMATC
