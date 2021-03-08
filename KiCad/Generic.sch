@@ -392,24 +392,12 @@ NoConn ~ 3550 3850
 Wire Wire Line
 	2950 1550 2950 1650
 Wire Wire Line
-	3550 3950 3550 4050
-Wire Wire Line
-	3550 4050 3650 4050
-Wire Wire Line
-	3650 4050 3650 4350
-Connection ~ 3650 4350
-Connection ~ 3650 4050
-Wire Wire Line
-	3650 4350 4000 4350
-Wire Wire Line
 	2400 2050 2350 2050
 Wire Wire Line
 	1850 2050 1850 4350
 Connection ~ 2350 2050
 Wire Wire Line
 	2350 2050 1850 2050
-Wire Wire Line
-	3850 3650 3850 4050
 Wire Wire Line
 	7100 2000 7750 2000
 Wire Wire Line
@@ -511,10 +499,7 @@ NoConn ~ 3550 2350
 Connection ~ 2950 4350
 Wire Wire Line
 	1850 4350 2950 4350
-Connection ~ 3550 4050
 Connection ~ 2950 1550
-Wire Wire Line
-	3850 4050 3650 4050
 Wire Wire Line
 	3550 3650 3850 3650
 Wire Wire Line
@@ -535,8 +520,6 @@ Wire Wire Line
 	3550 1850 3950 1850
 Wire Wire Line
 	3550 1750 3950 1750
-Wire Wire Line
-	3650 4350 2950 4350
 Wire Wire Line
 	2950 1550 3950 1550
 $Comp
@@ -559,4 +542,32 @@ Wire Wire Line
 NoConn ~ 3550 3450
 NoConn ~ 3550 3150
 NoConn ~ 3550 3350
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 60460B50
+P 8250 1400
+F 0 "J3" H 8222 1282 50  0000 R CNN
+F 1 "VBUS" H 8222 1373 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8250 1400 50  0001 C CNN
+F 3 "~" H 8250 1400 50  0001 C CNN
+	1    8250 1400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7700 1300 8050 1300
+Connection ~ 7700 1300
+Wire Wire Line
+	7700 1550 8050 1550
+Wire Wire Line
+	8050 1550 8050 1400
+Connection ~ 7700 1550
+Wire Wire Line
+	2950 4350 3850 4350
+NoConn ~ 3550 3950
+NoConn ~ 3550 4050
+Wire Wire Line
+	3850 3650 3850 4350
+Connection ~ 3850 4350
+Wire Wire Line
+	3850 4350 4000 4350
 $EndSCHEMATC
