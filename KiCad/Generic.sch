@@ -41,7 +41,7 @@ Text GLabel 1850 1750 0    50   Input ~ 0
 EN
 Text GLabel 8250 1800 2    50   Input ~ 0
 D-
-Text GLabel 7750 2000 2    50   Input ~ 0
+Text GLabel 8250 2000 2    50   Input ~ 0
 D+
 Wire Wire Line
 	6200 2800 6500 2800
@@ -398,8 +398,6 @@ Connection ~ 2350 2050
 Wire Wire Line
 	2350 2050 1850 2050
 Wire Wire Line
-	7100 2000 7750 2000
-Wire Wire Line
 	6500 2800 7750 2800
 Wire Wire Line
 	7100 1800 8250 1800
@@ -583,4 +581,6 @@ $EndComp
 Wire Wire Line
 	8550 4650 7800 4650
 NoConn ~ 9600 1600
+Wire Wire Line
+	7100 2000 8250 2000
 $EndSCHEMATC
