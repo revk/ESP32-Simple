@@ -102,7 +102,6 @@ Wire Wire Line
 Wire Wire Line
 	7000 5450 7100 5450
 Connection ~ 7100 5450
-NoConn ~ 7800 4650
 Text GLabel 8050 4350 2    50   Input ~ 0
 I
 Text GLabel 8050 4450 2    50   Input ~ 0
@@ -570,4 +569,18 @@ Wire Wire Line
 Connection ~ 3850 4350
 Wire Wire Line
 	3850 4350 4000 4350
+$Comp
+L power:GND #PWR0101
+U 1 1 60465D7D
+P 8550 4650
+F 0 "#PWR0101" H 8550 4400 50  0001 C CNN
+F 1 "GND" H 8555 4477 50  0000 C CNN
+F 2 "" H 8550 4650 50  0001 C CNN
+F 3 "" H 8550 4650 50  0001 C CNN
+	1    8550 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4650 7800 4650
+NoConn ~ 9600 1600
 $EndSCHEMATC
