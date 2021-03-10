@@ -35,7 +35,7 @@ F 3 "~" H 7350 1500 50  0001 C CNN
 	1    7350 1500
 	0    -1   -1   0   
 $EndComp
-Text GLabel 3950 2050 2    50   Input ~ 0
+Text GLabel 3550 2050 2    50   Input ~ 0
 I
 Text GLabel 1850 1750 0    50   Input ~ 0
 EN
@@ -102,18 +102,12 @@ Wire Wire Line
 Wire Wire Line
 	7000 5450 7100 5450
 Connection ~ 7100 5450
-Text GLabel 8050 4350 2    50   Input ~ 0
+Text GLabel 7800 4350 2    50   Input ~ 0
 I
-Text GLabel 8050 4450 2    50   Input ~ 0
+Text GLabel 7800 4450 2    50   Input ~ 0
 O
-Text GLabel 8050 4550 2    50   Input ~ 0
+Text GLabel 7800 4550 2    50   Input ~ 0
 EN
-Wire Wire Line
-	7800 4350 8050 4350
-Wire Wire Line
-	7800 4450 8050 4450
-Wire Wire Line
-	7800 5150 8050 5150
 Wire Wire Line
 	7200 5450 8050 5450
 $Comp
@@ -199,22 +193,14 @@ F 3 "" H 4000 4350 50  0001 C CNN
 	1    4000 4350
 	1    0    0    -1  
 $EndComp
-Text GLabel 8050 5150 2    50   Input ~ 0
+Text GLabel 7800 5150 2    50   Input ~ 0
 CBUS3
-Text GLabel 8050 5050 2    50   Input ~ 0
+Text GLabel 7800 5050 2    50   Input ~ 0
 CBUS2
-Text GLabel 8050 4950 2    50   Input ~ 0
+Text GLabel 7800 4950 2    50   Input ~ 0
 CBUS1
-Text GLabel 8050 4850 2    50   Input ~ 0
+Text GLabel 7800 4850 2    50   Input ~ 0
 CBUS0
-Wire Wire Line
-	7800 4550 8050 4550
-Wire Wire Line
-	7800 4850 8050 4850
-Wire Wire Line
-	8050 4950 7800 4950
-Wire Wire Line
-	8050 5050 7800 5050
 $Comp
 L Connector:Conn_01x06_Male J1
 U 1 1 6049A89B
@@ -226,25 +212,25 @@ F 3 "~" H 2800 6300 50  0001 C CNN
 	1    2800 6300
 	1    0    0    -1  
 $EndComp
-Text GLabel 3950 2450 2    50   Input ~ 0
+Text GLabel 3550 2450 2    50   Input ~ 0
 IO1
-Text GLabel 3950 2650 2    50   Input ~ 0
+Text GLabel 3550 2650 2    50   Input ~ 0
 IO2
-Text GLabel 3950 1950 2    50   Input ~ 0
+Text GLabel 3550 1950 2    50   Input ~ 0
 IO3
-Text GLabel 3950 2750 2    50   Input ~ 0
+Text GLabel 3550 2750 2    50   Input ~ 0
 IO4
-Text GLabel 3950 2150 2    50   Input ~ 0
+Text GLabel 3550 2150 2    50   Input ~ 0
 IO5
-Text GLabel 3950 1850 2    50   Input ~ 0
+Text GLabel 3550 1850 2    50   Input ~ 0
 O
-Text GLabel 3950 1750 2    50   Input ~ 0
+Text GLabel 3550 2850 2    50   Input ~ 0
 CBUS3
-Text GLabel 3950 2850 2    50   Input ~ 0
+Text GLabel 3550 1750 2    50   Input ~ 0
 CBUS0
-Text GLabel 3950 2250 2    50   Input ~ 0
+Text GLabel 3550 2250 2    50   Input ~ 0
 CBUS1
-Text GLabel 3950 2550 2    50   Input ~ 0
+Text GLabel 3550 2550 2    50   Input ~ 0
 CBUS2
 Text GLabel 4250 6200 2    50   Input ~ 0
 IO1
@@ -502,22 +488,6 @@ Wire Wire Line
 Wire Wire Line
 	3850 3550 3550 3550
 Wire Wire Line
-	3950 2750 3550 2750
-Wire Wire Line
-	3950 2650 3550 2650
-Wire Wire Line
-	3950 2450 3550 2450
-Wire Wire Line
-	3950 2150 3550 2150
-Wire Wire Line
-	3550 2050 3950 2050
-Wire Wire Line
-	3950 1950 3550 1950
-Wire Wire Line
-	3550 1850 3950 1850
-Wire Wire Line
-	3550 1750 3950 1750
-Wire Wire Line
 	2950 1550 3950 1550
 $Comp
 L RF_Module:ESP32-WROOM-32 U1
@@ -530,12 +500,6 @@ F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_
 	1    2950 2950
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3950 2550 3550 2550
-Wire Wire Line
-	3950 2850 3550 2850
-Wire Wire Line
-	3950 2250 3550 2250
 NoConn ~ 3550 3450
 NoConn ~ 3550 3150
 NoConn ~ 3550 3350
