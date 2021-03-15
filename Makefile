@@ -31,8 +31,8 @@ PCBCase/case: PCBCase/case.c
 
 case: KiCad/Generic.scad KiCad/Generic-nohole.scad
 
-KiCad/Generic.scad: KiCad/Generic.kicad_pcb PCBCase/case.c
+KiCad/Generic.scad: KiCad/Generic.kicad_pcb PCBCase/case
 	PCBCase/case -o $@ $< --base=4.9
 
-KiCad/Generic-nohole.scad: KiCad/Generic.kicad_pcb PCBCase/case.c
+KiCad/Generic-nohole.scad: KiCad/Generic.kicad_pcb PCBCase/case
 	PCBCase/case -o $@ $< --base=4.9 --ignore=J3
