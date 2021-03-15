@@ -29,7 +29,10 @@ ftdizap/ftdizap: ftdizap/ftdizap.c
 PCBCase/case: PCBCase/case.c
 	make -C PCBCase
 
-case: KiCad/Generic.scad
+case: KiCad/Generic.scad KiCad/Generic-nohole.scad
 
-KiCad/Generic.scad: PCBCase/case KiCad/Generic.kicad_pcb
-	PCBCase/case KiCad/Generic.kicad_pcb
+KiCad/Generic.scad: KiCad/Generic.kicad_pcb PCBCase/case.c
+	PCBCase/case -o $@ $< --base=4.9
+
+KiCad/Generic-nohole.scad: KiCad/Generic.kicad_pcb PCBCase/case.c
+	PCBCase/case -o $@ $< --base=4.9 --ignore=J3
