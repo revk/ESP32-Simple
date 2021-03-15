@@ -11,7 +11,6 @@ update:
 	git submodule update --init --recursive --remote
 	git commit -a -m "Library update"
 
-
 # Set GPIO low (whichever CBUS is set to mode 8/GPIO)
 bootmode: ftdizap/ftdizap
 	./ftdizap/ftdizap --cbus=0
@@ -27,3 +26,10 @@ ftdi: ftdizap/ftdizap
 ftdizap/ftdizap: ftdizap/ftdizap.c
 	make -C ftdizap
 
+PCBCase/case: PCBCase/case.c
+	make -C PCBCase
+
+case: KiCad/Generic.scad
+
+KiCad/Generic.scad: PCBCase/case KiCad/Generic.kicad_pcb
+	PCBCase/case KiCad/Generic.kicad_pcb

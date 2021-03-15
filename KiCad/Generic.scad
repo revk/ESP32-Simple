@@ -1,4 +1,4 @@
-// Generated case design for ../ESP32-OTA/KiCad/Generic.kicad_pcb
+// Generated case design for KiCad/Generic.kicad_pcb
 // By https://github.com/revk/PCBCase
 // title:	Generic ESP32 with GPIO
 // date:	2021-03-10
