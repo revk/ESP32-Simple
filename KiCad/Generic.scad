@@ -8,11 +8,12 @@
 //
 
 // Globals
+debug=false;
 margin=0.800000;
 casebase=5.000000;
 casetop=5.000000;
 casewall=3.000000;
-fit=0.200000;
+fit=0.100000;
 edge=2.000000;
 pcbthickness=1.600000;
 pcbwidth=19.000000;
@@ -24,7 +25,7 @@ module pcb(){linear_extrude(height=1.600000)polygon([[0.000000,29.100000],[19.00
 // Populated PCB
 module board(){
 	pcb();
-// Missing Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+translate([2.200000,1.800000,0.000000])rotate([180,0,0])m0(); // Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
 translate([13.870000,15.080000,0.000000])rotate([0,0,180.000000])rotate([180,0,0])m1(); // RevK:D24V5F3-NoSHDN
 translate([15.730000,3.250000,0.000000])rotate([0,0,90.000000])rotate([180,0,0])m2(); // Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder
 translate([13.230000,3.250000,0.000000])rotate([0,0,90.000000])rotate([180,0,0])m2(); // Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder
@@ -37,6 +38,12 @@ translate([9.500000,19.450000,1.600000])m5(); // RF_Module:ESP32-WROOM-32
 translate([2.650000,25.250000,0.000000])rotate([180,0,0])m2(); // Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder
 translate([2.650000,27.700000,0.000000])rotate([0,0,180.000000])rotate([180,0,0])m2(); // Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder
 translate([3.230000,7.100000,1.600000])m6(); // Connector_Molex:Molex_SPOX_5268-06A_1x06_P2.50mm_Horizontal
+}
+
+module m0()
+{ // Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical
+translate([-1.27,-3.81,-3])cube([2.54,5.08,100]);
+
 }
 
 module m1()
@@ -295,5 +302,5 @@ module parts()
 	translate([pcbwidth+casewall+10,0,0])top();
 }
 
-//test();
-parts();
+if(debug)test();
+else parts();
