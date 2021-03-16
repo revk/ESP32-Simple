@@ -32,7 +32,7 @@ PCBCase/case: PCBCase/case.c
 case: KiCad/Generic.scad KiCad/Generic-nohole.scad
 
 KiCad/Generic.scad: KiCad/Generic.kicad_pcb PCBCase/case Makefile
-	PCBCase/case -o $@ $< --base=4.9
+	PCBCase/case -o $@ $< --edge=2 --base=4.9
 
 KiCad/Generic-nohole.scad: KiCad/Generic.kicad_pcb PCBCase/case Makefile
-	PCBCase/case -o $@ $< --base=4.9 --ignore=J3
+	PCBCase/case -o $@ $< --edge=2 --base=4.9 --ignore=J3
