@@ -30,6 +30,10 @@ PCBCase/case: PCBCase/case.c
 	make -C PCBCase
 
 case: KiCad/Generic.scad KiCad/Generic-nohole.scad
+stl: KiCad/Generic.stl KiCad/Generic-nohole.stl
+
+%.stl: %.scad
+	/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD $< -o $@
 
 KiCad/Generic.scad: KiCad/Generic.kicad_pcb PCBCase/case Makefile
 	PCBCase/case -o $@ $< --edge=2 --base=4.9
