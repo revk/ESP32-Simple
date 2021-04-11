@@ -7,4 +7,6 @@ Based on ESP32RevK library
 
 This also includes PCB and case for a minimal ESP32 board with USB-C and 5 GPIO pins on a connector.
 
+![214627](https://user-images.githubusercontent.com/996983/114298126-c11eb680-9aac-11eb-8ed0-07d2525a8c99.jpg)
+
 Copyright © 2019-21 Adrian Kennard, Andrews & Arnold Ltd. See LICENCE file for details. GPL 3.0
