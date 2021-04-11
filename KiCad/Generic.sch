@@ -306,9 +306,6 @@ Wire Wire Line
 	3950 5700 3850 5700
 Connection ~ 3850 5700
 Wire Wire Line
-	4050 5700 3950 5700
-Connection ~ 3950 5700
-Wire Wire Line
 	3750 5700 3750 5300
 Wire Wire Line
 	3650 6000 3650 6200
@@ -584,4 +581,15 @@ Wire Wire Line
 Connection ~ 4050 6600
 Wire Wire Line
 	3000 6600 4050 6600
+$Comp
+L power:VBUS #PWR?
+U 1 1 60732D3D
+P 4050 5700
+F 0 "#PWR?" H 4050 5550 50  0001 C CNN
+F 1 "VBUS" H 4065 5873 50  0000 C CNN
+F 2 "" H 4050 5700 50  0001 C CNN
+F 3 "" H 4050 5700 50  0001 C CNN
+	1    4050 5700
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
