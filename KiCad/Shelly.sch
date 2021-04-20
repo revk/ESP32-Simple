@@ -194,13 +194,13 @@ $EndComp
 $Comp
 L power:+3.3V #PWR02
 U 1 1 607BA094
-P 2700 1700
-F 0 "#PWR02" H 2700 1550 50  0001 C CNN
-F 1 "+3.3V" V 2715 1828 50  0000 L CNN
-F 2 "" H 2700 1700 50  0001 C CNN
-F 3 "" H 2700 1700 50  0001 C CNN
-	1    2700 1700
-	0    -1   -1   0   
+P 1900 1500
+F 0 "#PWR02" H 1900 1350 50  0001 C CNN
+F 1 "+3.3V" V 1915 1628 50  0000 L CNN
+F 2 "" H 1900 1500 50  0001 C CNN
+F 3 "" H 1900 1500 50  0001 C CNN
+	1    1900 1500
+	0    1    1    0   
 $EndComp
 $Comp
 L power:+3.3V #PWR04
@@ -340,10 +340,6 @@ NoConn ~ 7300 4800
 NoConn ~ 7300 5100
 NoConn ~ 7300 5200
 NoConn ~ 7300 5300
-Text GLabel 9600 3050 1    50   Input ~ 0
-SHDN
-Text GLabel 9600 1600 0    50   Input ~ 0
-SHDN
 Text GLabel 6500 3800 1    50   Input ~ 0
 VBUS
 Wire Wire Line
@@ -430,17 +426,6 @@ F 3 "" H 7900 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Transistor_BJT:BC817 Q1
-U 1 1 607DEB3D
-P 9500 3250
-F 0 "Q1" H 9691 3296 50  0000 L CNN
-F 1 "BC817" H 9691 3205 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 9700 3175 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" H 9500 3250 50  0001 L CNN
-	1    9500 3250
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR016
 U 1 1 607E0D6B
 P 9600 3450
@@ -454,14 +439,39 @@ $EndComp
 $Comp
 L Device:R R6
 U 1 1 607E1676
-P 9150 3250
-F 0 "R6" V 8943 3250 50  0000 C CNN
-F 1 "1k" V 9034 3250 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 9080 3250 50  0001 C CNN
-F 3 "~" H 9150 3250 50  0001 C CNN
-	1    9150 3250
+P 1150 1500
+F 0 "R6" V 943 1500 50  0000 C CNN
+F 1 "1k" V 1034 1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" V 1080 1500 50  0001 C CNN
+F 3 "~" H 1150 1500 50  0001 C CNN
+	1    1150 1500
 	0    1    1    0   
 $EndComp
-Text GLabel 9000 3250 0    50   Input ~ 0
+Text GLabel 1000 1500 0    50   Input ~ 0
 RST
+$Comp
+L Relay_SolidState:TLP3546 U2
+U 1 1 607EB3D2
+P 1600 1600
+F 0 "U2" H 1600 1925 50  0000 C CNN
+F 1 "TLP3546" H 1600 1834 50  0000 C CNN
+F 2 "Package_DIP:DIP-6_W7.62mm" H 1600 1300 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=12671&prodName=TLP3546" H 1600 1600 50  0001 C CNN
+	1    1600 1600
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9600 1600
+$Comp
+L power:GND #PWR0101
+U 1 1 607EE7DF
+P 1300 1700
+F 0 "#PWR0101" H 1300 1450 50  0001 C CNN
+F 1 "GND" V 1305 1572 50  0000 R CNN
+F 2 "" H 1300 1700 50  0001 C CNN
+F 3 "" H 1300 1700 50  0001 C CNN
+	1    1300 1700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2700 1700 1900 1700
 $EndSCHEMATC
