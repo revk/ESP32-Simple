@@ -437,17 +437,6 @@ F 3 "~" H 1150 1500 50  0001 C CNN
 $EndComp
 Text GLabel 1000 1500 0    50   Input ~ 0
 RST
-$Comp
-L Relay_SolidState:TLP3546 U2
-U 1 1 607EB3D2
-P 1600 1600
-F 0 "U2" H 1600 1925 50  0000 C CNN
-F 1 "Solid State Relay DIP 6" H 1650 1350 50  0000 C CNN
-F 2 "Package_DIP:DIP-6_W7.62mm" H 1600 1300 50  0001 C CNN
-F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=12671&prodName=TLP3546" H 1600 1600 50  0001 C CNN
-	1    1600 1600
-	1    0    0    -1  
-$EndComp
 NoConn ~ 9600 1600
 $Comp
 L power:GND #PWR0101
@@ -477,4 +466,15 @@ Wire Wire Line
 	7700 4550 7400 4550
 Text Notes 1050 6250 0    157  ~ 0
 Notes…\nChange to smaller/cheaper component for RST power controll to Shelly 1\nMaybe add a C/R on RST to pulse limit itMaybe add the n-channel\nMOSFET circuit for GPIO0 so only low when DTR low and RTS high
+$Comp
+L RevK:G3VM-61VY3(TR) U2
+U 1 1 6083CB16
+P 1600 1850
+F 0 "U2" H 1600 2425 50  0000 C CNN
+F 1 "G3VM-61VY3(TR)" H 1600 2334 50  0000 C CNN
+F 2 "RevK:Special-SOP-4-3.7x4.55" H 1600 1850 50  0001 C CNN
+F 3 "https://www.mouser.co.uk/ProductDetail/653-G3VM-61VY3TR" H 1600 1850 50  0001 C CNN
+	1    1600 1850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
