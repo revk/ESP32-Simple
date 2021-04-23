@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Generic ESP32"
-Date "2021-04-11"
+Date "2021-04-23"
 Rev "3"
 Comp ""
 Comment1 "@TheRealRevK"
