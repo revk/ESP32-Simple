@@ -464,8 +464,6 @@ F 3 "" H 7400 4350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7700 4550 7400 4550
-Text Notes 1050 6250 0    157  ~ 0
-Notes…\nChange to smaller/cheaper component for RST power controll to Shelly 1\nMaybe add a C/R on RST to pulse limit itMaybe add the n-channel\nMOSFET circuit for GPIO0 so only low when DTR low and RTS high
 $Comp
 L RevK:G3VM-61VY3(TR) U2
 U 1 1 6083CB16
