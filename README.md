@@ -4,6 +4,8 @@ The code is the simplest build from RevK library, and as such is an ideal base i
 
 This also includes a PCB and case for a minimal ESP32 board with USB-C and 5 GPIO pins on a connector. This tiny board works well for any application needing up to 5 GPIO, such as the ASR33 teletytpe controller: https://github.com/revk/ESP32-ASR33
 
+The PCB design uses USB-C for power and serial via an FT231X USB/Serial chip, and a Pololu regulator.
+
 - Includes code
 - Includes KiCad schamtic and layout
 - Includes STL case designs for 3D printing
