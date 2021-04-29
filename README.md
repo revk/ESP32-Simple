@@ -1,9 +1,6 @@
-# Base OTA app
+# Simples code and PCB for ESP32 project
 
-Based on ESP32RevK library
-
-- Uses OTA names space for NVS, and will try and OTA from string called "otaurl".
-- Otherwise simply connects to WiFi and MQTT and awaits commands.
+The code is the simplest build from RevK library, and as such is an ideal base install from which you can OTA any otehr code. Can also be used as a staged OTA using "otaurl" in the "OTA" namespace in NVS as an automatic OTA when started.
 
 This also includes a PCB and case for a minimal ESP32 board with USB-C and 5 GPIO pins on a connector. This tiny board works well for any application needing up to 5 GPIO, such as the ASR33 teletytpe controller: https://github.com/revk/ESP32-ASR33
 
