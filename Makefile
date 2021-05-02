@@ -44,5 +44,5 @@ KiCad/Generic-nohole.scad: KiCad/Generic.kicad_pcb PCBCase/case Makefile
 	PCBCase/case -o $@ $< --edge=2 --base=4.9 --ignore=J3
 
 KiCad/Shelly.scad: KiCad/Shelly.kicad_pcb PCBCase/case Makefile
-	PCBCase/case -o $@ $< --base=2.6 --top=3.8
+	PCBCase/case -o $@ $< --base=2.8 --top=4
 
