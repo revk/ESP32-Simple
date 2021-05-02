@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "Shelly programmer"
+Title "Shelly Tasmotizer"
 Date "2021-04-19"
-Rev "2"
-Comp ""
+Rev "4"
+Comp "Adrian Kennard Andrews & Arnold Ltd"
 Comment1 "@TheRealRevK"
 Comment2 "www.me.uk"
 Comment3 ""
@@ -108,17 +108,6 @@ Wire Wire Line
 	6500 2800 7750 2800
 Wire Wire Line
 	7100 1800 7750 1800
-$Comp
-L RevK:D24V5F3-NoSHDN M1
-U 1 1 60455088
-P 9600 1600
-F 0 "M1" H 9700 1200 50  0000 L CNN
-F 1 "D24V5F3-NoSHDN" H 9550 1750 50  0000 L CNN
-F 2 "RevK:D24V5F3-SMD-Like" H 9600 1800 50  0001 C CNN
-F 3 "https://www.pololu.com/product/2842/resources" H 9600 1800 50  0001 C CNN
-	1    9600 1600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7100 2000 7750 2000
 $Comp
@@ -437,7 +426,6 @@ F 3 "~" H 1150 1500 50  0001 C CNN
 $EndComp
 Text GLabel 1000 1500 0    50   Input ~ 0
 RST
-NoConn ~ 9600 1600
 $Comp
 L power:GND #PWR0101
 U 1 1 607EE7DF
@@ -475,4 +463,17 @@ F 3 "https://www.mouser.co.uk/ProductDetail/653-G3VM-61VY3TR" H 1600 1850 50  00
 	1    1600 1850
 	1    0    0    -1  
 $EndComp
+$Comp
+L RevK:Regulator Reg1
+U 1 1 608E858D
+P 9600 1600
+F 0 "Reg1" H 10178 1501 50  0000 L CNN
+F 1 "3.3V" H 10178 1410 50  0000 L CNN
+F 2 "RevK:RegulatorBlock" H 10050 1700 50  0001 C CNN
+F 3 "https://www.pololu.com/product/2842/resources" H 10050 1700 50  0001 C CNN
+	1    9600 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9600 1600 9600 1700
 $EndSCHEMATC
