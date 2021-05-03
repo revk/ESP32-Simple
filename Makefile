@@ -29,7 +29,7 @@ ftdizap/ftdizap: ftdizap/ftdizap.c
 PCBCase/case: PCBCase/case.c
 	make -C PCBCase
 
-case: KiCad/Generic.scad KiCad/Generic-nohole.scad KiCad/Shelly.scad
+scad: KiCad/Generic.scad KiCad/Generic-nohole.scad KiCad/Shelly.scad
 stl: KiCad/Generic.stl KiCad/Generic-nohole.stl KiCad/Shelly.stl
 
 %.stl: %.scad
@@ -44,5 +44,5 @@ KiCad/Generic-nohole.scad: KiCad/Generic.kicad_pcb PCBCase/case Makefile
 	PCBCase/case -o $@ $< --edge=2 --base=4.9 --ignore=J3
 
 KiCad/Shelly.scad: KiCad/Shelly.kicad_pcb PCBCase/case Makefile
-	PCBCase/case -o $@ $< --base=2.8 --top=4
+	PCBCase/case -o $@ $< --base=2.8 --top=4 --wall=4
 
