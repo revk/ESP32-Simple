@@ -169,7 +169,7 @@ Text GLabel 3550 2650 2    50   Input ~ 0
 IO2
 Text GLabel 3550 1950 2    50   Input ~ 0
 IO3
-Text GLabel 3550 2750 2    50   Input ~ 0
+Text GLabel 3550 2550 2    50   Input ~ 0
 IO4
 Text GLabel 3550 2150 2    50   Input ~ 0
 IO5
@@ -340,7 +340,7 @@ Wire Wire Line
 Connection ~ 7200 3750
 Wire Wire Line
 	7200 3750 7750 3750
-NoConn ~ 3550 2350
+NoConn ~ 3550 2850
 Wire Wire Line
 	2950 1550 3950 1550
 NoConn ~ 3550 3450
@@ -416,8 +416,8 @@ $EndComp
 Text GLabel 3550 1750 2    50   Input ~ 0
 GPIO0
 NoConn ~ 3550 2250
-NoConn ~ 3550 2850
-NoConn ~ 3550 2550
+NoConn ~ 3550 2350
+NoConn ~ 3550 2750
 $Comp
 L Interface_USB:FT231XQ U2
 U 1 1 60849D1E
