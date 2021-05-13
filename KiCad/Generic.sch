@@ -101,9 +101,8 @@ O
 Text GLabel 9050 3700 2    50   Input ~ 0
 EN
 NoConn ~ 3550 2950
-NoConn ~ 3550 3050
-NoConn ~ 3550 3250
 NoConn ~ 3550 3750
+NoConn ~ 3550 3250
 $Comp
 L power:VBUS #PWR05
 U 1 1 60464020
@@ -438,7 +437,6 @@ F 3 "" H 7800 5050 50  0001 C CNN
 	1    7800 5050
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 7800 5250
 NoConn ~ 7800 5350
 NoConn ~ 7800 5450
 NoConn ~ 7800 5550
@@ -806,4 +804,8 @@ F 3 "" H 3100 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3100 5200
+Text GLabel 3550 3050 2    50   Input ~ 0
+CBUS
+Text GLabel 7800 5250 2    50   Input ~ 0
+CBUS
 $EndSCHEMATC
