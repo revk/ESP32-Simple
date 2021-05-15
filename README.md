@@ -1,17 +1,15 @@
 # Simplest code and PCB for ESP32 projects
 
-The code is the simplest build from RevK library, and as such is an ideal base install from which you can OTA any otehr code. Can also be used as a staged OTA using "otaurl" in the "OTA" namespace in NVS as an automatic OTA when started.
+The code is the simplest build from RevK library, and as such is an ideal base install from which you can OTA any other code. Can also be used as a staged OTA using "otaurl" in the "OTA" namespace in NVS as an automatic OTA when started.
 
-This also includes a PCB and case for a minimal ESP32 board with USB-C and 5 GPIO pins on a connector. This tiny board works well for any application needing up to 5 GPIO, such as the ASR33 teletytpe controller: https://github.com/revk/ESP32-ASR33
+There are also two PCB designs:-
 
-The PCB design uses USB-C for power and serial via an FT231X USB/Serial chip, and a Pololu regulator.
+# Generic
 
-- Includes code
-- Includes KiCad schamtic and layout
-- Includes STL case designs for 3D printing
+A small 29mm x 19mm board for ESP32-WROOM-32 and 6 pin connector (SPOX or 0.1" pins). Provides 5 GPIO (all are ADC, TOUCH, and RTC). Power (and serial) via USB-C, or can use DC input (either via 6 way header or separate pads) 4V to 40V. The 6 way header includes pads for various passives to be fitted. Includes one on-board LED.
 
-![214627](https://user-images.githubusercontent.com/996983/114298126-c11eb680-9aac-11eb-8ed0-07d2525a8c99.jpg)
+# Battery
 
-This also includes a PCB for a small programming adapter mainly for use with Shelly 1, Shelly 2.5, or Shelly i3 devices.
+A slightly more complex design in the same size as above, but the USB is separately powered. When no USB connected it draws no current. The regulator has an automatic ECO mode down to 27uA. Ideal for ULP based projects running from battery (4V to 40V, so ideal for 9V battery).
 
 Copyright © 2019-21 Adrian Kennard, Andrews & Arnold Ltd. See LICENCE file for details. GPL 3.0
