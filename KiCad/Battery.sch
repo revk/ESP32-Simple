@@ -98,7 +98,7 @@ Text GLabel 7800 4550 2    50   Input ~ 0
 EN
 NoConn ~ 3550 2950
 NoConn ~ 3550 3050
-NoConn ~ 3550 3750
+NoConn ~ 3550 4050
 $Comp
 L power:VBUS #PWR05
 U 1 1 60464020
@@ -297,7 +297,6 @@ Wire Wire Line
 	3000 6100 3150 6100
 Wire Wire Line
 	3150 6100 3150 5900
-NoConn ~ 3550 3850
 Wire Wire Line
 	2950 1550 2950 1650
 Wire Wire Line
@@ -333,7 +332,6 @@ F 3 "~" H 9700 1200 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 NoConn ~ 3550 3950
-NoConn ~ 3550 4050
 Wire Wire Line
 	7100 2000 8250 2000
 $Comp
@@ -781,4 +779,65 @@ F 3 "" H 4600 3450 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3550 3450 4000 3450
+$Comp
+L Transistor_FET:2N7002 Q3
+U 1 1 60A1A002
+P 4450 4425
+F 0 "Q3" H 4654 4471 50  0000 L CNN
+F 1 "BSS169" H 4654 4380 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4650 4350 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 4450 4425 50  0001 L CNN
+	1    4450 4425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 60A1CD4E
+P 4550 4775
+F 0 "R12" V 4757 4775 50  0000 C CNN
+F 1 "18K" V 4666 4775 50  0000 C CNN
+F 2 "RevK:R_0603" V 4480 4775 50  0001 C CNN
+F 3 "~" H 4550 4775 50  0001 C CNN
+	1    4550 4775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 60A21378
+P 4550 5075
+F 0 "R13" V 4757 5075 50  0000 C CNN
+F 1 "1k" V 4666 5075 50  0000 C CNN
+F 2 "RevK:R_0603" V 4480 5075 50  0001 C CNN
+F 3 "~" H 4550 5075 50  0001 C CNN
+	1    4550 5075
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0121
+U 1 1 60A22E69
+P 4550 5225
+F 0 "#PWR0121" H 4550 4975 50  0001 C CNN
+F 1 "GND" H 4555 5052 50  0000 C CNN
+F 2 "" H 4550 5225 50  0001 C CNN
+F 3 "" H 4550 5225 50  0001 C CNN
+	1    4550 5225
+	1    0    0    -1  
+$EndComp
+Connection ~ 4550 4925
+Text GLabel 4550 4225 1    50   Input ~ 0
+DC
+Text GLabel 9300 1425 2    50   Input ~ 0
+DC
+Wire Wire Line
+	3550 3750 3900 3750
+Wire Wire Line
+	3900 3750 3900 4425
+Wire Wire Line
+	3900 4425 4250 4425
+Wire Wire Line
+	3550 3850 3775 3850
+Wire Wire Line
+	3775 3850 3775 4925
+Wire Wire Line
+	3775 4925 4550 4925
 $EndSCHEMATC
