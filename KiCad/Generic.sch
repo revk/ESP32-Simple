@@ -588,7 +588,7 @@ U 1 1 6043326C
 P 2950 2950
 F 0 "U1" H 2950 4531 50  0000 C CNN
 F 1 "ESP32-WROOM-32" H 2950 4440 50  0000 C CNN
-F 2 "RF_Module:ESP32-WROOM-32" H 2950 1450 50  0001 C CNN
+F 2 "RevK:ESP32-WROOM-32" H 2950 1450 50  0001 C CNN
 F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 2650 3000 50  0001 C CNN
 	1    2950 2950
 	1    0    0    -1  
