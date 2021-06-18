@@ -39,19 +39,17 @@ Text GLabel 2950 2200 2    50   Input ~ 0
 I
 Text GLabel 1250 1900 0    50   Input ~ 0
 EN
-Text GLabel 7650 1950 2    50   Input ~ 0
+Text GLabel 6900 2050 2    50   Input ~ 0
 D-
-Text GLabel 7650 2150 2    50   Input ~ 0
+Text GLabel 6900 2150 2    50   Input ~ 0
 D+
 Wire Wire Line
 	5600 2950 5900 2950
 Connection ~ 5900 2950
 Wire Wire Line
 	6500 2250 6500 2150
-Connection ~ 6500 2150
 Wire Wire Line
 	6500 2050 6500 1950
-Connection ~ 6500 1950
 Wire Wire Line
 	1250 1900 1750 1900
 Wire Wire Line
@@ -289,15 +287,11 @@ Wire Wire Line
 NoConn ~ 2950 4000
 Wire Wire Line
 	5900 2950 7150 2950
-Wire Wire Line
-	6500 1950 7650 1950
 NoConn ~ 2950 3000
 NoConn ~ 2950 3300
 NoConn ~ 2950 3500
 NoConn ~ 2950 4100
 NoConn ~ 2950 4200
-Wire Wire Line
-	6500 2150 7650 2150
 $Comp
 L Device:R R6
 U 1 1 607317BC
@@ -854,14 +848,42 @@ Wire Wire Line
 	2350 1700 3350 1700
 NoConn ~ 2950 2400
 $Comp
-L power:+12V #PWR?
+L power:+12V #PWR0101
 U 1 1 60E11F09
 P 2300 5725
-F 0 "#PWR?" H 2300 5575 50  0001 C CNN
+F 0 "#PWR0101" H 2300 5575 50  0001 C CNN
 F 1 "+12V" H 2315 5898 50  0000 C CNN
 F 2 "" H 2300 5725 50  0001 C CNN
 F 3 "" H 2300 5725 50  0001 C CNN
 	1    2300 5725
 	1    0    0    -1  
 $EndComp
+$Comp
+L Device:R R9
+U 1 1 60CC90EE
+P 6750 2050
+F 0 "R9" V 6875 1900 50  0000 C CNN
+F 1 "27R" V 6875 2050 50  0000 C CNN
+F 2 "RevK:R_0603" V 6680 2050 50  0001 C CNN
+F 3 "~" H 6750 2050 50  0001 C CNN
+	1    6750 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 60CC90F4
+P 6750 2150
+F 0 "R10" V 6850 2300 50  0000 C CNN
+F 1 "27R" V 6850 2150 50  0000 C CNN
+F 2 "RevK:R_0603" V 6680 2150 50  0001 C CNN
+F 3 "~" H 6750 2150 50  0001 C CNN
+	1    6750 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6500 2050 6600 2050
+Connection ~ 6500 2050
+Wire Wire Line
+	6600 2150 6500 2150
+Connection ~ 6500 2150
 $EndSCHEMATC
