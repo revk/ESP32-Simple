@@ -82,7 +82,7 @@ F 3 "~" H 6750 1750 50  0001 C CNN
 $EndComp
 NoConn ~ 6500 2550
 NoConn ~ 6500 2650
-NoConn ~ 2950 3200
+NoConn ~ 2950 2800
 NoConn ~ 2950 3400
 NoConn ~ 2950 3900
 $Comp
@@ -144,11 +144,11 @@ Text GLabel 2950 3800 2    50   Input ~ 0
 IO1
 Text GLabel 2950 2600 2    50   Input ~ 0
 IO2
-Text GLabel 2950 2800 2    50   Input ~ 0
+Text GLabel 2950 2300 2    50   Input ~ 0
 IO3
 Text GLabel 2950 2100 2    50   Input ~ 0
 IO4
-Text GLabel 2950 2300 2    50   Input ~ 0
+Text GLabel 2950 3200 2    50   Input ~ 0
 IO5
 Text GLabel 2950 2000 2    50   Input ~ 0
 O
