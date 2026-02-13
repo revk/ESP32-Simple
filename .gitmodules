@@ -7,4 +7,4 @@
 	branch = main
 [submodule "PCBCase"]
 	path = PCBCase
-	url = https://github.com/revk/PCBCase
+	url = https://codeberg.org/RevK/PCBCase
